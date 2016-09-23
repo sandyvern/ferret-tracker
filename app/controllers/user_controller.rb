@@ -1,4 +1,4 @@
-class USERsController < ApplicationController
+class UsersController < ApplicationController
 
   #Index Controller
   get "/users" do

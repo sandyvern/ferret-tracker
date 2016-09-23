@@ -16,6 +16,21 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
+  <nav class="navbar navbar-default" id="navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/ferrets">Ferret Tracker</a>
+        <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+              <li><a href="/ferrets">My Ferrets</a></li>
+              <li><a href="/ferrets/add_ferret">Create Ferret</a></li>
+              <li><a href="/logout">Log Out</a></li>
+            <% else %>
+              <li><a href="/signup">Sign Up</a></li>
+              <li><a href="/login">Log In</a></li>
+            <%end %>
+        </ul>
+    </div>
+  </nav>
   <div class="wrapper">
 
       <%= yield %>

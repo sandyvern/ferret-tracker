@@ -1,1 +1,8 @@
 <h1>This is the show page for an individual instance of your model.</h1>
+
+<p>These are the current members of your ferret-y business, <%= @user.username %></p>
+  <% @user.ferrets.each do |tweet| %>
+    <div>
+      <%= ferret.content %>
+    </div>
+  <% end %>

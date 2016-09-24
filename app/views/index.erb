@@ -6,7 +6,7 @@
   <% if logged_in? %>
     <h2>Welcome Back, <%=current_user.username %>!!</h2>
   <% else %>
-    <a class="btn btn-primary" href="/signup">Sign Up</a>
+    <a class="btn btn-primary" href="/users/new">Sign Up</a>
     <a class="btn btn-default" href="/login">Log In</a>
   <% end %>
 

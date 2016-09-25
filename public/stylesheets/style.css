@@ -1,0 +1,28 @@
+#navigation {
+  background-color: #3a271b;
+}
+
+body {
+  background-color: #d5eaf9;
+}
+
+#navigation a {
+  color: #c69c6d;
+}
+
+#navigation a:hover{
+  color: #fff;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: #fff;
+}
+
+#footer {
+  align-content: center;
+  height: 40px;
+}

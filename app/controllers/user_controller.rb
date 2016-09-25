@@ -7,7 +7,11 @@ class UsersController < ApplicationController
 
   # New Item Controllers
   get "/users/new" do
-    erb :"/users/new.html"
+    if !logged_in?
+      erb :"/users/new.html"
+    else
+      redirect to '/ferrets'
+    end
   end
 
   post "/users" do

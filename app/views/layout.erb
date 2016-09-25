@@ -12,16 +12,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="./stylesheets/normalize.css">
-  <link rel="stylesheet" href="/stylesheets/main.css" />
+<!--  <link rel="stylesheet" href="/stylesheets/main.css" /> -->
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
-  <div class="wrapper">
+  <nav class="navbar navbar-default" id="navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/ferrets">Ferret Tracker</a>
+        <ul class="nav navbar-nav navbar-right">
+            <% if logged_in? %>
+              <li><a href="/ferrets">My Ferrets</a></li>
+              <li><a href="/ferrets/add_ferret">Create Ferret</a></li>
+              <li><a href="/logout">Log Out</a></li>
+            <% else %>
+              <li><a href="/users/new">Sign Up</a></li>
+              <li><a href="/login">Log In</a></li>
+            <%end %>
+        </ul>
+    </div>
+  </nav>
+  <div class="container">
 
       <%= yield %>
-
-    <footer class="branding">
-      <small>&copy; 2016 <strong>Ferret Tracker</strong> developed with &#128153; by Sandy Hogan</small>
-    </footer>
+  </div>
+    <footer class="footer navbar-fixed-bottom center" id="footer">
+       <div class="container">
+         <small>&copy; 2016 <strong>Ferret Tracker,</strong> developed with &#128153; by Sandy Hogan</small>
+       </div>
+     </footer>
   </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
